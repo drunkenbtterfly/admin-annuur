@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\DonasiController;
 use App\Http\Controllers\Api\KegiatanController;
 use App\Http\Controllers\Api\KegiatanTambahanController;
 use App\Http\Controllers\Api\FasilitasController;
@@ -36,6 +37,8 @@ Route::get('/santri30juz', [Santri30JuzController::class, 'index']);
 Route::get('/santri30juz/{id}', [Santri30JuzController::class, 'show']);
 Route::get('/sertifikat', [SertifikatController::class, 'index']);
 Route::get('/sertifikat/{id}', [SertifikatController::class, 'show']);
+Route::get('/donasi', [DonasiController::class, 'index']);
+Route::get('/donasi/{id}', [DonasiController::class, 'show']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
